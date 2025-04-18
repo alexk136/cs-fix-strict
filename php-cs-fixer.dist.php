@@ -93,6 +93,12 @@ return (new PhpCsFixer\Config())
         'php_unit_construct' => true,
         'php_unit_method_casing' => ['case' => 'camel_case'],
         'strict_comparison' => true,
+        'no_useless_return' => true,
+        'no_useless_else' => true,
+        'single_line_throw' => true,
+        'phpdoc_order' => true,
+        'phpdoc_trim_consecutive_blank_line_separation' => true,
+        'final_internal_class' => true,
     ])
     ->setRiskyAllowed(true)
     ->setFinder($finder)
