@@ -46,6 +46,32 @@ To check for issues without modifying files, use:
 vendor/bin/php-cs-fixer fix --dry-run
 ```
 
+## Comparison: Custom Config vs `@PER-CS2.0`
+
+1. **Modern Best Practices**  
+   Includes `declare_strict_types`, `use_arrow_functions`, `static_lambda`, `strict_comparison`, and `final_internal_class` — promoting clean, future-proof code.
+
+2. **Refined Rule Selection**  
+   You explicitly enable or disable rules like `class_definition`, `phpdoc_to_comment`, and `no_break_comment`, giving you full control rather than relying on blanket presets.
+
+3. **Flexible `native_function_invocation`**  
+   Unlike `@PER-CS2.0`, your config uses `strict: false`, allowing `use function` imports and preventing unwanted global backslashes.
+
+4. **Improved Readability**  
+   With fine-grained formatting control (`cast_spaces`, `trailing_comma_in_multiline`, `ordered_imports`, `concat_space`), the resulting code is more readable and consistent.
+
+5. **Clean Class Structure**  
+   The custom `ordered_class_elements` block ensures logical organization of class elements, which is often missing in default presets.
+
+6. **Enhanced PHPUnit Style**  
+   Enforcing `php_unit_construct` and `php_unit_method_casing` ensures consistent test structure without relying on broader, less focused test presets.
+
+7. **Comment and Docblock Hygiene**  
+   Your inclusion of `phpdoc_order`, `phpdoc_align`, and trimming rules improves the clarity of PHPDoc without over-relying on auto-removal.
+
+8. **No Useless Code**  
+   Rules like `no_useless_return` and `no_useless_else` keep the codebase minimal and expressive.
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions for improving the configuration:
